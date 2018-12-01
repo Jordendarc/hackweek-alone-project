@@ -1,0 +1,45 @@
+<html>
+<div id="contact" class="tab-pane">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $("#sendMessageForm").submit(function(){
+          var title = $("#title").val();
+          var msg = $("#message").val();
+          var email = $("#email").val();
+          if(email == "")
+            email = "none"
+          var dataString = "title=" + title + "&message=" + msg + "&email=" + email;
+          $.ajax({
+            type: "POST",
+            url: "createMessage.php",
+            data: dataString,
+            success: function(){
+              alert("message successfully sent :)");
+              $("#title").innerHTML = "";
+              $("#message").innerHTML = "";
+              $("#email").innerHTML = "";
+            }
+          });
+          return false;
+        });
+    });
+    </script>
+<h3>Send Us a Message</h3>
+<h5>If there are any questions, concerns, bugs, or issues you have, feel free to contact me below.
+  Email is only required if you would like me to get back to you</h5>
+<div class="sendMessage">
+  <form name="sendMessageForm" id="sendMessageForm" action="" method="POST">
+      <label for="title">Message Title:</label><br>
+      <input type="text" id="title" name="title" required><br>
+      <label for="message">Message Body:</label><br>
+      <textarea type="text" id="message" name="message" required></textarea><br>
+      <label for="Email">Email:</label><br>
+      <input type="text" id="email" name="email" placeholder="(Not required)"><br>
+    <input type="submit" id="sub" value="submit"></input>
+  </form>
+  </div>
+</div>
+<link rel="stylesheet" type="text/css" href="css/navbar.css">
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 13px;
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #1CA3F6;
+            /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+    }
+    /* .members-count,
+    .members-list, */
+    .messages {
+      border: 1px solid #e4e4e4;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #DEF1FC;
+    }
+    .headerContainer {
+      border: 1px solid #e4e4e4;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #DEF1FC;
+    }
+    .messages {
+      flex-shrink: 1;
+      overflow: auto;
+    }
+    .message {
+      padding: 5px 0;
+    }
+    .message .member {
+      display: inline-block;
+    }
+    .member {
+      padding-right: 10px;
+      position: relative;
+    }
+    .message-form {
+      display: flex;
+      flex-shrink: 0;
+    }
+    .message-form__input {
+      flex-grow: 1;
+      border: 1px solid #dfdfdf;
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #e4e4e4;
+    }
+    .message-form__button {
+      margin: 10px;
+    }
+    #kindaContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+    /* form {
+      position: absolute;
+      bottom: 0;
+    } */
+    h1 {
+      background-color: #1CA3F6;
+      text-align: center;
+    }
+    /* #container {
+      background-color: blue;
+    } */
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Chatroom!</h1>
+  <div id="kindaContainer">
+  <h3>Please use this chat to help others<h3> <a href="/hackweek"><button>Home</button></a>
+  </div>
+  <div id="container">
+    <div class="headerContainer">
+      <div class="members-count"></div>
+      <div class="members-list"></div>
+    </div>
+    <div class="messages"></div>
+    <form class="message-form" onsubmit="return false;">
+      <input class="message-form__input" id="formInputId" placeholder="Say Hello :)" type="text"/>
+      <input class="message-form__button" value="Send" type="submit"/>
+    </form>
+</div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

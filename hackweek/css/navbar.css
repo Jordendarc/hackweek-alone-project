@@ -1,0 +1,89 @@
+body {
+  /* margin: 0; */
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px;
+  background-color: #DDE8F1;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+.navbar {
+  width: 100%;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #D1E9FC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#head {
+  float: right;
+  color: #D1E9FC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 33.33%;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #95CEFD;
+  color: white;
+}
+.fullPost {
+  border: 2px solid black;
+  padding: 3px 5px 4px;
+  /* margin: 15px 0px; */
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: #DEF1FC;
+  box-shadow: 5px 5px 3px grey;
+}
+.listItemStamp{
+  font-size: 10px;
+}
+.topnav p {
+  float: left;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+input, .postFormItem {
+  width: 100px;
+}
+#formUserName, #formBodyText, #message, #title {
+  width: 100%;
+  resize: none;
+}
+.container {
+  border: 1px solid grey;
+  background-color: white;
+  /* box-shadow: 5px 5px 3px grey; */
+  height: 100%;
+}
+.header.clearfix {
+  width: 100%;
+}
+.sendMessage {
+  border: 2px solid black;
+  padding: 3px 5px 4px;
+  /* margin: 15px 0px; */
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: #DEF1FC;
+  box-shadow: 5px 5px 3px grey;
+}
