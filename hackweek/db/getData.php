@@ -17,16 +17,16 @@ $allNumRows = $rowAll['num_rows'];
 
 //Get rows by limit except already displayed
 //$query = $db->query("SELECT * FROM postInformation WHERE id < ".$lastID." ORDER BY id DESC LIMIT ".$showLimit);
-    $query = $db->query("SELECT * FROM postInformation");
+    $query = $db->query("SELECT * FROM postInformation WHERE id < ".$lastID." ORDER BY id DESC LIMIT ".$showLimit);
 
 if($query->num_rows > 0){
     while($row = $query->fetch_assoc()){
     $postID = $row["id"]; ?>
-        <div class="fullPost">
           <div class="listItemName"><h4><?php echo $row['username']; ?></h4></div>
           <div class="listItemBody"><h4><?php echo $row['postBody']; ?></h4></div>
           <div class="listItemStamp"><h4><?php echo $row['postTimeStamp']; ?></h4></div>
-      </div>
+      <!-- <link rel="stylesheet" type="text/css" href="css/navbar.css"> -->
+
 <?php } ?>
 
 <?php if($allNumRows > $showLimit){ ?>

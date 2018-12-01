@@ -1,9 +1,9 @@
 <?php
 //DB details
-$dbHost     = '';
-$dbUsername = '';
-$dbPassword = '';
-$dbName     = '';
+$dbHost     = 'localhost';
+$dbUsername = 'root';
+$dbPassword = 'Cornthecob123';
+$dbName     = 'posts';
 
 //Create connection and select DB
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

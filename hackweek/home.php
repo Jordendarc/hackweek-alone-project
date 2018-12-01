@@ -30,8 +30,8 @@
                     },
                     success:function(html){
                         $('.load-more').remove();
-                        $('#tab-content').append(html);
-                        $(".container").attr("height", "100vh;");
+                        $('.fullPost').append(html);
+                        // $(".container").attr("height", "100vh;");
                     }
                 });
             }
@@ -70,5 +70,7 @@
           </div>
       <?php } ?>
     </div>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+
 </div>
 </html>
